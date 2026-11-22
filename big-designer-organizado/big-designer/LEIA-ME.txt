@@ -1,0 +1,29 @@
+BIG DESIGNER · SITE DO LICON ABRÃO NHATAVE
+
+ESTRUTURA
+index.html                  página inicial (liga a todas as outras)
+pages/                      sobre, habilidades, projetos, projeto-app, projeto-cafe, projeto-livro, contacto
+css/index.css               todo o estilo
+js/index.js                 animações, habilidades, 3D e formulário
+images/favicon.png          ícone que aparece no separador do navegador
+images/licon-hero.jpg       a tua foto do topo
+images/projetos/app|cafe|livro/   fotos de cada projecto: 1.jpg a 5.jpg (a 1.jpg é a grande)
+models/hero.glb             modelo 3D do topo
+
+COMO O HTML, O CSS E O JAVASCRIPT SE LIGAM
+Cada página chama o CSS no <head> e o JavaScript no fim do <body>:
+  index.html     <link rel="stylesheet" href="css/index.css">      <script src="js/index.js"></script>
+  pages/*.html   <link rel="stylesheet" href="../css/index.css">   <script src="../js/index.js"></script>
+Dentro de pages/ o caminho começa por ../ (sobe uma pasta). O favicon segue a mesma regra.
+
+COMO ABRIR NO PC
+1. Extrai o ZIP completo. Não abras o index.html de dentro do zip: assim o CSS, o JS e as imagens não são encontrados e a página aparece sem estilo.
+2. No VS Code abre a pasta big-designer e clica em Go Live (Live Server). O modelo 3D costuma precisar disto para carregar.
+
+COMO ADICIONAR FOTOS DOS PROJECTOS
+Guarda cada foto com o nome 1.jpg, 2.jpg ... 5.jpg na pasta do projecto. Aparecem sozinhas.
+
+PUBLICAR NO GITHUB PAGES
+1. Extrai o ZIP. Abre a pasta big-designer.
+2. No repositório: Add file > Upload files. SELECCIONA TUDO o que está dentro da pasta (index.html + pastas) e ARRASTA para a página.
+3. Commit. Depois Settings > Pages > Deploy from a branch > main / (root).
